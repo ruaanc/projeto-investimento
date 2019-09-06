@@ -27,6 +27,7 @@ class User extends Authenticatable
         'notes',
         'email',
         'password',
+        'status',
         'permission'
     ];
 
