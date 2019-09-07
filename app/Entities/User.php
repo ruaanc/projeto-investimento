@@ -39,5 +39,8 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-
+    
+    public function setPasswordAttribute($value) {
+        $this->attributes['password'] = env('PASSWORD_HASH') ? bcrypt('123456'): $value;
+    }
 }
